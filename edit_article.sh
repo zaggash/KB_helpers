@@ -23,8 +23,9 @@ BRANCH=""
 EDITOR=${EDITOR:-vim}
 
 # select branch
+COLUMNS=0
 echo "Which article do you want to edit ? "
-select branch in $(git branch|tr -d ' '|tr -d '*'|sed -e 's#^#branch/#') Exit
+select branch in $(git branch|tr -d ' '|tr -d '*' |grep -v 'master'|sed -e 's#^#branch/#') Exit
 do
   case $branch in
     Exit)
