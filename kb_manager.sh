@@ -176,6 +176,7 @@ case $COMMAND in
     syncFork
     ;;
   create)
+    syncFork
     createNewArticle
     ;;
   edit)
